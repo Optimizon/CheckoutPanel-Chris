@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/checkout');
+mongoose.connect(process.env.DB_URL);
 // mongoose.connect('mongodb://mattminwoolee:password123@ds147942.mlab.com:47942/front-end-capstone');
 
 const productSchema = new mongoose.Schema({
