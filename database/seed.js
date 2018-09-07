@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
+const helper = require('./helpers/dataGenerator.js');
 mongoose.connect('mongodb://localhost/checkout');
-// mongoose.connect('mongodb://mattminwoolee:password123@ds147942.mlab.com:47942/front-end-capstone');
 
 const productSchema = new mongoose.Schema({
   product_id: Number,
@@ -30,16 +30,12 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model('Product', productSchema);
 
-const retrieveInformationById = (id, callback) => {
-  Product.find({ product_id: id }, (err, data) => {
-    if (err) {
-      callback(err, null);
-    } else {
-      callback(null, data);
-    }
-  });
+const generateRandomData = () => {
+  for (let id = 1; id <= 100; id++) {
+    // let checkoutProduct = helper.generateRandomData(id);
+    const newEntry = new Product(helper.generateRandomData(id));
+    newEntry.save();
+  }
 };
 
-module.exports = {
-  retrieveInformationById,
-};
+generateRandomData();
