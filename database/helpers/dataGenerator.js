@@ -7,11 +7,13 @@ module.exports.generateRandomData = (id) => {
   };
   obj.product_id = id; // set dependent on loop iteration
   obj.name = faker.commerce.productName();
+  obj.link = faker.lorem.sentence();
+  obj.shares = Math.floor(Math.random() * 100) + 1;
   obj.price = faker.commerce.price();
   obj.is_prime = faker.random.boolean();
   obj.in_stock = faker.random.boolean();
   obj.giftwrap_available = faker.random.boolean();
-  obj.quantity_max = Math.floor(Math.random()*10) + 1;
+  obj.quantity_max = Math.floor(Math.random() * 10) + 1;
   obj.seller = faker.company.companyName();
 
   obj.protection_plan.exists = faker.random.boolean();
