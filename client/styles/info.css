@@ -1,0 +1,36 @@
+:local .miniSpacing {
+  margin-bottom: 8px;
+}
+
+:local .icon {
+  background: url(https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_2x-01a49470266a51f632dab1aef2fc09112d280c1e._V2_.png);
+  background-size: 400px 900px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+}
+
+:local .iconPrime {
+  /* border-style: none;  not working */ 
+  height: 15px;
+  width: 54px;
+  background-position: -5px -490px;
+  vertical-align: baseline;
+  color: #555;
+}
+
+
+:local .price {
+  color: #B12704;
+  font-size: 17px;
+}
+
+:local .details {
+  display: block;
+  color: #0066c0;
+}
+
+:local .inStock {
+  color: #008a00;
+  font-size: 17px;
+}

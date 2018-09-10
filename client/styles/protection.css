@@ -1,0 +1,11 @@
+:local .protection {
+  display: inline-block;
+}
+
+:local .protection > input {
+  margin: 5px;
+}
+
+:local .addToCart {
+
+}

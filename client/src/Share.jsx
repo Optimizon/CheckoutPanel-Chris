@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../styles/shares.css';
 import classNames from 'classnames';
+import styles from '../styles/shares.css';
 
 class Share extends React.Component {
   constructor(props) {

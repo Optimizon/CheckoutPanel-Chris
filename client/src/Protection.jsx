@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/protection.css';
 
 class Protection extends React.Component {
   constructor(props) {
@@ -12,6 +13,10 @@ class Protection extends React.Component {
     return(
       <div>
         <b>Add a Protection Plan:</b>
+        <div className={ styles.protection }>
+          <input type="checkbox"></input><span>4-Year Protection</span> for <span>$1.04</span>
+        </div>
+        
       </div>
     )
   }

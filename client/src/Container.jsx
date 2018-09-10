@@ -1,33 +1,36 @@
 import React from 'react';
 import styles from '../styles/container.css';
-import classNames from 'classnames';
 import Protection from './Protection.jsx';
 import Quantity from './Quantity.jsx';
+import Purchase from './Purchase.jsx';
+import Info from './Info.jsx';
+import AddToList from './AddToList.jsx';
 
 class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
-    }
+      productData: {},
+    };
   }
 
   render() {
     return(
       <div className={ styles.container }>
-        <div className={ styles.price }>$257.00</div>
-        <div className="is-prime"><img className={ classNames({[styles.iconPrime]: true, [styles.icon]: true}) }></img> | <b>FREE</b> One-Day</div>
+        <Info/>
         <div className={ styles.miniSpacing }></div>
-        <div>Get FREE Delivery <b>TOMORROW</b> if you order within 6 hrs 14 mins and choose this date at checkout.<span className={ styles.details }>Details.</span></div>
-        <div className={ styles.miniSpacing }></div>
-        <div className={ styles.inStock }>In Stock.</div>
-        <div>Ships from and sold by Amazon.com. <span>Gift-wrap available.</span></div>
-        <div className={ styles.miniSpacing }></div>
-        <Quantity />
+        <Quantity product={this.state.productData}/>
         <div className={ styles.miniSpacing }></div>
         <Protection />
+        <div className={ styles.miniSpacing }></div>
+        <Purchase />
+        <div className={ styles.miniSpacing }></div>
+        <hr></hr>
+        <div>Deliver to..</div>
+        <hr></hr>
+        <AddToList />
       </div>
-    )
+    );
   }
 }
 
