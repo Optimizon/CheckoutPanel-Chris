@@ -12,10 +12,9 @@ class Checkout extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={ styles.checkout}>
         <Share />
         <Container />
-        {/* <p className={ styles.checkout }>This is the checkout!</p> */}
       </div>
     );
   }

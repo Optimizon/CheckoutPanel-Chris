@@ -12,12 +12,13 @@ class Share extends React.Component {
 
   render() {
     return(
-      <div>
-        share
+      <div className={ styles.share}>
+        <span>Share</span>
         <i className={ classNames({[styles.iconMail]: true, [styles.icon]: true}) }></i>
         <i className={ classNames({[styles.iconFacebook]: true, [styles.icon]: true}) }></i>
         <i className={ classNames({[styles.iconTwitter]: true, [styles.icon]: true}) }></i>
         <i className={ classNames({[styles.iconPinterest]: true, [styles.icon]: true}) }></i>
+        <span>33K+ Shares</span>
       </div>
     )
   }
