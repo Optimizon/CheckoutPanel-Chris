@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/purchase.css';
 
-const Purchase = () => {
+const Purchase = (props) => {
   return (
     <div className={ styles.purchase }>
       <input className={ styles.addToCart } type="button" value="Add to Cart"></input>
