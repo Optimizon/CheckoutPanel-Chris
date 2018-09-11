@@ -1,19 +1,35 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from '../styles/shares.css';
+import ShareModal from './ShareModal.jsx';
 
 class Share extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      product: '',
-    }
+      showModal: false,
+    };
+
+    this.showModal = this.showModal.bind(this);
+  }
+
+  showModal() {
+    this.setState({
+      showModal: true,
+    });
+  }
+
+  hideModal() {
+    this.setState({
+      showModal: false,
+    });
   }
 
   render() {
     return(
       <div className={ styles.share}>
-        <span>Share</span>
+        <ShareModal show={this.state.showModal}></ShareModal>
+        <span onClick={this.showModal}>Share</span>
         <i className={ classNames({[styles.iconMail]: true, [styles.icon]: true}) }></i>
         <i className={ classNames({[styles.iconFacebook]: true, [styles.icon]: true}) }></i>
         <i className={ classNames({[styles.iconTwitter]: true, [styles.icon]: true}) }></i>

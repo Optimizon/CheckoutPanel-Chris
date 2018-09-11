@@ -1,5 +1,6 @@
 :local .share {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   padding: 5%;
 }
 
