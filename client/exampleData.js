@@ -20,7 +20,7 @@ const data = {
   is_prime: true, // (GOOD)
   in_stock: true, // (GOOD)
   giftwrap_available: true, // (GOOD)
-  quantity_max: 6,
+  quantity_max: 6, // 1-10 (GOOD)
   seller: 'Google', // one word usually (GOOD)
 };
 

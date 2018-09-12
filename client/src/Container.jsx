@@ -10,7 +10,6 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      productData: {},
     };
   }
 
@@ -19,7 +18,7 @@ class Container extends React.Component {
       <div className={ styles.container }>
         <Info productData={this.props.productData}/>
         <div className={ styles.mediumSpacing }></div>
-        <Quantity product={this.state.productData}/>
+        <Quantity productData={this.props.productData}/>
         <div className={ styles.mediumSpacing }></div>
         <Protection />
         <div className={ styles.miniSpacing }></div>
