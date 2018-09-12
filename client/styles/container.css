@@ -1,0 +1,17 @@
+:local .container {
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d3d3d3;
+  display: block;
+  padding: 7%;
+}
+
+:local .miniSpacing {
+  margin-bottom: 10px;
+}
+
+:local .mediumSpacing {
+  margin-bottom: 20px;
+}
+

@@ -1,3 +1,7 @@
-:local(.checkout) {
-  color: blue;
+.checkout {
+  font-family: Arial, sans-serif;
+  width: 244px;
+  line-height: 19px;
+  font-size: 13px;
+  display: block;
 }

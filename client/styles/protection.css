@@ -1,0 +1,15 @@
+:local .protection {
+  display: inline-block;
+}
+
+:local .protection > input {
+  margin: 5px;
+}
+
+:local .protectionPlan {
+  color: #0066c0;
+}
+
+:local .price {
+  color:#B12704;
+}

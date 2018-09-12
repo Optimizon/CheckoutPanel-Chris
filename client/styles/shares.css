@@ -1,0 +1,49 @@
+:local .share {
+  display: flex;
+  justify-content: space-between;
+  padding: 5%;
+}
+
+:local .click {
+  color: #0066c0;
+}
+
+:local .icon {
+  background: url(https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_2x-01a49470266a51f632dab1aef2fc09112d280c1e._V2_.png);
+  background-size: 400px 900px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: top;
+}
+
+:local .iconMail {
+  width: 19px;
+  height: 17px;
+  position: relative;
+  top: 1px;
+  background-position: -99px -168px;
+}
+
+:local .iconFacebook {
+  width: 17px;
+  height: 17px;
+  background-position: -36px -168px;
+  position: relative;
+  top: 1px;
+}
+
+:local .iconTwitter {
+  width: 18px;
+  height: 17px;
+  background-position: -57px -168px;
+  position: relative;
+  top: 1px;
+}
+
+:local .iconPinterest {
+  width: 17px;
+  height: 17px;
+  background-position: -78px -168px;
+  position: relative;
+  top: 1px;
+}
