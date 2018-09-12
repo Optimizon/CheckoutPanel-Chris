@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import styles from '../styles/shares.css';
-import ShareModal from './ShareModal.jsx';
+import ShareModal from './modals/ShareModal.jsx';
 
 class Share extends React.Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Share extends React.Component {
     return(
       <div className={ styles.share}>
         <ShareModal show={this.state.showModal} handleClose={this.hideModal}></ShareModal>
-        <span onClick={this.showModal}>Share</span>
+        <span className={ styles.click} onClick={this.showModal}>Share</span>
         <i className={ classNames({ [styles.iconMail]: true, [styles.icon]: true }) }></i>
         <i className={ classNames({ [styles.iconFacebook]: true, [styles.icon]: true }) }></i>
         <i className={ classNames({ [styles.iconTwitter]: true, [styles.icon]: true }) }></i>

@@ -6,6 +6,10 @@
   margin: 5px;
 }
 
-:local .addToCart {
+:local .protectionPlan {
+  color: #0066c0;
+}
 
+:local .price {
+  color:#B12704;
 }

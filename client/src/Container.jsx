@@ -18,9 +18,9 @@ class Container extends React.Component {
     return(
       <div className={ styles.container }>
         <Info/>
-        <div className={ styles.miniSpacing }></div>
+        <div className={ styles.mediumSpacing }></div>
         <Quantity product={this.state.productData}/>
-        <div className={ styles.miniSpacing }></div>
+        <div className={ styles.mediumSpacing }></div>
         <Protection />
         <div className={ styles.miniSpacing }></div>
         <Purchase />
