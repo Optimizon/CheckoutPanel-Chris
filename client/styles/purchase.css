@@ -4,7 +4,7 @@
   color: #bdbdbd;
 }
 
-:local .purchase > input {
+:local .purchase > button {
   color: black;
   display: block;
   height: 30px;
