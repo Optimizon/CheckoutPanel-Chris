@@ -17,7 +17,7 @@ class Container extends React.Component {
   render() {
     return(
       <div className={ styles.container }>
-        <Info/>
+        <Info productData={this.props.productData}/>
         <div className={ styles.mediumSpacing }></div>
         <Quantity product={this.state.productData}/>
         <div className={ styles.mediumSpacing }></div>

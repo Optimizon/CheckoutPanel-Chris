@@ -13,15 +13,15 @@ const data = {
     price: 910,
   },
   product_id: 1,
-  name: 'Google Wifi System, Router Replacement Whole Home Coverage',
-  link: 'consectetur', // one word
-  shares: 89,
-  price: 109,
-  is_prime: false,
-  in_stock: false,
-  giftwrap_available: true,
+  name: 'Google Wifi System, Router Replacement Whole Home Coverage', // (GOOD)
+  link: 'consectetur', // one word (GOOD)
+  shares: 89, // (GOOD)
+  price: 109, // between 1-1000 (GOOD)
+  is_prime: true, // (GOOD)
+  in_stock: true, // (GOOD)
+  giftwrap_available: true, // (GOOD)
   quantity_max: 6,
-  seller: 'Google', // one word usually
+  seller: 'Google', // one word usually (GOOD)
 };
 
 module.exports.data = data;

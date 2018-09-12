@@ -35,7 +35,7 @@ class Share extends React.Component {
         <i className={ classNames({ [styles.iconFacebook]: true, [styles.icon]: true }) }></i>
         <i className={ classNames({ [styles.iconTwitter]: true, [styles.icon]: true }) }></i>
         <i className={ classNames({ [styles.iconPinterest]: true, [styles.icon]: true }) }></i>
-        <span>33K+ Shares</span>
+        <span>{this.props.productData.shares}K+ Shares</span>
       </div>
     )
   }

@@ -12,12 +12,11 @@ class Checkout extends React.Component {
     };
   }
 
-  
   render() {
     return (
       <div className={ styles.checkout}>
         <Share productData={this.state.productData}/>
-        <Container />
+        <Container productData={this.state.productData}/>
       </div>
     );
   }

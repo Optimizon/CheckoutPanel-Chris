@@ -2,17 +2,29 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from '../styles/info.css';
 
-const Info = (props) => {
+const Info = ({ productData }) => {
+  // set conditional rendering for certain information on the checkout panel
+  const styleIsPrime = { display: 'none' };
+  styleIsPrime.display = productData.is_prime ? 'block' : 'none';
+  const styleInStock = { display: 'none' };
+  const styleOutOfStock = { color: '#B12704', display: 'none' };
+  styleInStock.display = productData.in_stock ? 'block' : 'block';
+  const styleGiftWrap = { display: 'none' };
+  styleGiftWrap.display = productData.giftwrap_available ? 'inline' : 'none';
+
   return (
     <div>
-      <div className={ styles.price }>$257.00</div>
+      <div className={ styles.price }>${productData.price}.00</div>
       <div className={ styles.miniSpacing }></div>
-      <div><img className={ classNames({ [styles.iconPrime]: true, [styles.icon]: true }) }></img> | <b>FREE</b> One-Day</div>
+      <div style={ styleIsPrime }>
+        <div><img className={ classNames({ [styles.iconPrime]: true, [styles.icon]: true }) }></img> | <b>FREE</b> One-Day</div>
+        <div className={ styles.miniSpacing }></div>
+        <div>Get FREE Delivery <b>TOMORROW</b> if you order within 6 hrs 14 mins and choose this date at checkout.<span className={ styles.details }>Details.</span></div>
+      </div>
       <div className={ styles.miniSpacing }></div>
-      <div>Get FREE Delivery <b>TOMORROW</b> if you order within 6 hrs 14 mins and choose this date at checkout.<span className={ styles.details }>Details.</span></div>
-      <div className={ styles.miniSpacing }></div>
-      <div className={ styles.inStock }>In Stock.</div>
-      <div>Ships from and sold by Amazon.com. <span>Gift-wrap available.</span></div>
+      <div className={ styles.inStock } style={ styleInStock }>In Stock.</div>
+      <div className={ styles.inStock } style={ styleOutOfStock }>Out of Stock.</div>
+      <div>Ships from and sold by Amazon.com. <span style={ styleGiftWrap }>Gift-wrap available.</span></div>
     </div>
   );
 };
