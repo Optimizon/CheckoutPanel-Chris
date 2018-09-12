@@ -10,6 +10,7 @@ class Container extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      protectionPlanExists: this.props.productData.protection_plan.exists,
     };
   }
 
@@ -20,7 +21,8 @@ class Container extends React.Component {
         <div className={ styles.mediumSpacing }></div>
         <Quantity productData={this.props.productData}/>
         <div className={ styles.mediumSpacing }></div>
-        <Protection />
+        { // conditional rendering for protection plan
+          this.state.protectionPlanExists ? (<Protection productData={this.props.productData}/>) : (null) }
         <div className={ styles.miniSpacing }></div>
         <Purchase />
         <div className={ styles.miniSpacing }></div>

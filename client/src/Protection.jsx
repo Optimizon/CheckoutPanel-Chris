@@ -28,10 +28,10 @@ class Protection extends React.Component {
   render() {
     return(
       <div>
-        <ProtectionModal show={this.state.showModal} handleClose={this.hideModal}/>
+        <ProtectionModal productData={this.props.productData} show={this.state.showModal} handleClose={this.hideModal}/>
         <b>Add a Protection Plan:</b>
         <div className={ styles.protection }>
-          <input type="checkbox"></input><span onClick={this.showModal} className={ styles.protectionPlan }>4-Year Protection</span> for <span className={ styles.price }>$1.04</span>
+          <input type="checkbox"></input><span onClick={this.showModal} className={ styles.protectionPlan }>{this.props.productData.protection_plan.years}-Year Protection</span> for <span className={ styles.price }>${this.props.productData.protection_plan.price}</span>
         </div>
       </div>
     )

@@ -14,8 +14,8 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
         <hr></hr>
         <div className={ styles.body }>
           <div className={ styles.protectionInfo }>
-            <h3>Protection Plan Name</h3>
-            <h5>from <span>plan provider</span></h5>
+            <h3>{productData.protection_plan.name}</h3>
+            <h5>from <span>{productData.protection_plan.provider}</span></h5>
             <div>
               <p>Description 1</p>
               <p>Description 2</p>

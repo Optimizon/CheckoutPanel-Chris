@@ -1,10 +1,10 @@
 const data = {
   protection_plan: {
-    exists: true,
-    name: 'consequuntur repellendus saepe',
-    price: 182,
-    years: 5,
-    provider: 'Gulgowski Inc',
+    exists: true, // (GOOD)
+    name: 'consequuntur repellendus saepe', // (GOOD)
+    price: 182, // <-- not too sure what digits place to set this to (GOOD)
+    years: 5, // (GOOD)
+    provider: 'Gulgowski Inc', // (GOOD)
     rating: 4,
     description: 'Et non id. Laudantium quae dolorum dolorem quia debitis explicabo quia fuga assumenda. Sed natus alias delectus. Amet incidunt quae velit dolores et eaque adipisci.'  
   },
