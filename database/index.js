@@ -44,11 +44,3 @@ module.exports = {
   retrieveInformationById,
 };
 
-retrieveInformationById('1' , (err, data) => {
-  if (err) {
-    console.log('ERROR');
-  } else {
-    console.log('Here is the data: ', data);
-  }
-});
-
