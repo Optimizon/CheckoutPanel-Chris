@@ -29,13 +29,13 @@ class Share extends React.Component {
   render() {
     return(
       <div className={ styles.share}>
-        <ShareModal show={this.state.showModal} handleClose={this.hideModal}></ShareModal>
+        <ShareModal productData={this.props.productData} show={this.state.showModal} handleClose={this.hideModal}></ShareModal>
         <span className={ styles.click} onClick={this.showModal}>Share</span>
         <i className={ classNames({ [styles.iconMail]: true, [styles.icon]: true }) }></i>
         <i className={ classNames({ [styles.iconFacebook]: true, [styles.icon]: true }) }></i>
         <i className={ classNames({ [styles.iconTwitter]: true, [styles.icon]: true }) }></i>
         <i className={ classNames({ [styles.iconPinterest]: true, [styles.icon]: true }) }></i>
-        <span>33K+ Shares</span>
+        <span>{this.props.productData.shares}K+ Shares</span>
       </div>
     )
   }

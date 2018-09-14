@@ -30,27 +30,30 @@
   display: none;
 }
 
-:local .header {
-  height: 4vmax;
+:local .modalMain > header {
+  margin: 0px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-:local .header > h4 {
-  line-height: 0;
-}
-
-:local .header > button {
+:local .modalMain > header > button {
   border-radius: 4px;
 }
 
+:local .flex {
+  display: flex;
+  justify-content: flex-start;
+}
+
 :local .thumbnail {
-  width: 75px;
-  height: 75px;
+  width: 10vmin;
+  height: 10vmin;
+  object-fit: cover;
 }
 
 :local .shareDescription {
-  display: inline;
+  margin-left: 2vmin;
 }
 
 :local .textArea {
@@ -71,7 +74,7 @@
 }
 
 :local .iconMain {
-  width: 15%;
+  width: 10vmin;
   display: flex;
   justify-content: space-between;
 }
@@ -109,5 +112,25 @@
 }
 
 :local .miniSpacing {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+:local .buttons > input {
+  color: black;
+  display: block;
+  height: 30px;
+  width: 100%;
+  border-radius: 4px;
+  border-color: grey;
+}
+
+:local .submitButton {
+  background: linear-gradient(#f4e7c3, #eeb219);
+  margin: 10px 10px;
+}
+
+:local .bottomMain {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2vmin;
 }

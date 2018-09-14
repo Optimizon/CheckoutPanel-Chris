@@ -2,26 +2,27 @@ import React from 'react';
 import classNames from 'classnames';
 import styles from '../../styles/sharesModal.css';
 
-const ShareModal = ({ show, handleClose }) => {
+const ShareModal = ({ show, handleClose, productData }) => {
   const showHideClassName = show ? "display" : "displayNone"; // check if modal will be shown or not
   return(
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
       <section className={ styles.modalMain }>
-        <header className={ styles.header }>
-          <h4>Share this item via Email</h4>
+        <header>
+          <b>Share this item via Email</b>
           <button onClick={handleClose}>X</button>
         </header>
         <hr></hr>
-        <div>
+        <div className={ styles.flex }>
           <div className={ styles.thumbnail }>
-            <img src="asdf"></img>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/212yuX23jeL._SL500_SS75_SS75_.jpg"></img>
           </div>
           <div className={ styles.shareDescription }>
-            <div>Product Name, <span>Protection plan name</span></div>
-            <div>by seller</div>
-            <div><b>Link: </b>http://a.co/d/1vNIDtl</div>
+            <b>{productData.name}</b>
+            <div>by {productData.seller}</div>
+            <div><b>Link: </b>http://{productData.link}.com</div>
           </div>
         </div>
+        <div className={ styles.miniSpacing }></div>
         <hr></hr>
         <div className={ styles.textMain }>
           <div className={ styles.textArea }><b>To:</b><span>Import Contacts</span></div>
@@ -29,10 +30,15 @@ const ShareModal = ({ show, handleClose }) => {
         </div>
         <input type="checkbox"></input><span>Send me a copy of this Email</span>
         <div className={ styles.miniSpacing }></div>
-        <div className={ styles.iconMain } >
-          <i className={ classNames({ [styles.iconFacebook]: true, [styles.icon]: true }) }></i>
-          <i className={ classNames({ [styles.iconTwitter]: true, [styles.icon]: true }) }></i>
-          <i className={ classNames({ [styles.iconPinterest]: true, [styles.icon]: true }) }></i>
+        <div className={ styles.bottomMain }>
+          <div className={ styles.iconMain } >
+            <i className={ classNames({ [styles.iconFacebook]: true, [styles.icon]: true }) }></i>
+            <i className={ classNames({ [styles.iconTwitter]: true, [styles.icon]: true }) }></i>
+            <i className={ classNames({ [styles.iconPinterest]: true, [styles.icon]: true }) }></i>
+          </div>
+          <div className={ styles.buttons }>
+            <input className={ styles.submitButton } type="button" value="Send e-mail"></input>
+          </div>
         </div>
       </section>
     </div>
