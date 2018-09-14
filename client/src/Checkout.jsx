@@ -9,7 +9,20 @@ class Checkout extends React.Component {
     super(props);
     this.state = {
       productData: exampleData.data,
+      productID: 10,
     };
+  }
+
+  componentDidMount() {
+    $.ajax({
+      url: `http://localhost:3000/checkout/${this.state.productID}`,
+      method: 'GET',
+      success: (data) => {
+        // this.setState({
+        //   productData: data,
+        // });
+      },
+    });
   }
 
   render() {

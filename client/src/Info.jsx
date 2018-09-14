@@ -5,7 +5,7 @@ import styles from '../styles/info.css';
 const Info = ({ productData }) => {
   // set conditional rendering for certain information on the checkout panel
   const styleIsPrime = { display: 'none' };
-  styleIsPrime.display = productData.is_prime ? 'block' : 'none';
+  styleIsPrime.display = productData.is_prime ? 'inline-block' : 'none';
   const styleInStock = { display: 'none' };
   const styleOutOfStock = { color: '#B12704', display: 'none' };
   styleInStock.display = productData.in_stock ? 'block' : 'block';
@@ -17,7 +17,7 @@ const Info = ({ productData }) => {
       <div className={ styles.price }>${productData.price}.00</div>
       <div className={ styles.miniSpacing }></div>
       <div style={ styleIsPrime }>
-        <div><img className={ classNames({ [styles.iconPrime]: true, [styles.icon]: true }) }></img> | <b>FREE</b> One-Day</div>
+        <div><img src={'./images/isPrime.png'} className={ styles.iconPrime }></img> | <b>FREE</b> One-Day</div>
         <div className={ styles.miniSpacing }></div>
         <div>Get FREE Delivery <b>TOMORROW</b> if you order within 6 hrs 14 mins and choose this date at checkout.<span className={ styles.details }>Details.</span></div>
       </div>

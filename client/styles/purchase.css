@@ -1,16 +1,18 @@
 :local .purchase {
   text-align: center;
-  font-size: 12px;
+  font-size: 2vmin;
   color: #bdbdbd;
 }
 
 :local .purchase > button {
+  padding: 1px;
   color: black;
   display: block;
-  height: 30px;
+  height: 5vmin;
   width: 100%;
   border-radius: 4px;
   border-color: grey;
+  line-height: 4.5vmin;
 }
 
 :local .addToCart {
@@ -22,5 +24,5 @@
 }
 
 :local .miniSpacing {
-  margin-bottom: 7px;
+  margin-bottom: 2vmin;
 }

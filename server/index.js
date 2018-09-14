@@ -12,13 +12,14 @@ app.use((req, res, next) => {
 });
 app.use(express.static('./client/dist'));
 
-app.post('./checkout/product_id', bodyParser.json(), (req, res) => {
-  // client will make an AJAX POST request with a body containing the id number
-  db.retrieveInformationById(req.body, (err, data) => {
+app.get('/checkout/*', bodyParser.json(), (req, res) => {
+  // * representing the product ID
+  const productId = req.originalUrl.split('/')[2];
+  db.retrieveInformationById(productId, (err, data) => {
     if (err) {
       res.send(err);
     } else {
-      res.json(data);
+      res.json(data[0]);
     }
   });
 });
