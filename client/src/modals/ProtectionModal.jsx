@@ -17,7 +17,7 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
             <h2>{productData.protection_plan.name}</h2>
             <p>from <span>{productData.protection_plan.provider}</span></p>
             <div className="stars">
-              <img></img>
+              <img/>
               <span>(63)</span>
             </div>
             <div>

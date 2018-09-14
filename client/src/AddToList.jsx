@@ -45,7 +45,7 @@ class AddToList extends React.Component {
             ? (
               <div className={ styles.dropDownContent }>
                 <li>
-                  <span><img className={ styles.listIcon } src={star_img}></img><span><div>My Wish List</div><div style={{ fontSize: '2vmin' }}>public</div></span></span>
+                  <span><img className={ styles.listIcon } src={star_img} /><span><div>My Wish List</div><div style={{ fontSize: '2vmin' }}>public</div></span></span>
                 </li>
                 <li>Save for later</li>
                 <li>Clothing & Jewelry</li>
