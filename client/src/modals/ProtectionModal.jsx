@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import styles from '../../styles/protectionModal.css';
 
 const ProtectionModal = ({ show, handleClose, productData }) => {
-  const showHideClassName = show ? "display" : "displayNone"; // check if modal will be shown or not
-  return(
+  const showHideClassName = show ? 'display' : 'displayNone'; // check if modal will be shown or not
+  return (
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
       <section className={ styles.modalMain }>
         <header>

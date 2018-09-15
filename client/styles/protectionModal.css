@@ -28,7 +28,6 @@
 
 :local .displayNone {
   display: none;
-  color: blue;
 }
 
 :local .modalMain > header {
