@@ -27,6 +27,9 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
                 descriptionArr.map(line => <li>{line}</li>)
               }
             </div>
+            <div>
+              <p style={{ color: '#0066c0' }}>Learn more</p>
+            </div>
           </div>
           <div className={ styles.buttons }>
             <div>
