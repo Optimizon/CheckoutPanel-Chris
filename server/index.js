@@ -24,16 +24,5 @@ app.get('/checkout/*', bodyParser.json(), (req, res) => {
   });
 });
 
-// app.get('/checkout', (req, res) => {
-//   console.log(req.query.id);
-//   db.retrieveInformationById(req.query.id, (err, data) => {
-//     if (err) {
-//       res.send(err);
-//     } else {
-//       res.send(data);
-//     }
-//   });
-// });
-
 const PORT = 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));

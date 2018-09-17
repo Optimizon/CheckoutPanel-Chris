@@ -3,9 +3,8 @@ import classNames from 'classnames';
 import styles from '../../styles/sharesModal.css';
 
 const ShareModal = ({ show, handleClose, productData }) => {
-  console.log(productData.image);
-  const showHideClassName = show ? "display" : "displayNone"; // check if modal will be shown or not
-  return(
+  const showHideClassName = show ? 'display' : 'displayNone'; // check if modal will be shown or not
+  return (
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
       <section className={ styles.modalMain }>
         <header>
