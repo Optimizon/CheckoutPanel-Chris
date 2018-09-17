@@ -1,4 +1,7 @@
-exports.data = ['http://www.petwebsite.co.uk/media/k2/items/cache/0548677e6432786dd8df61eb3aaec139_L.jpg',
+exports.data = [
+'http://www.tinykittens.com/uploads/cases/canada3.jpg',
+'http://www.pethealthnetwork.com/sites/default/files/what-vaccines-does-my-new-kitten-need-175636241.jpg',
+'http://boydsbengals.com/wp-content/uploads/2015/12/Available-Kitten.jpg','http://www.petwebsite.co.uk/media/k2/items/cache/0548677e6432786dd8df61eb3aaec139_L.jpg',
 'http://cutecatsinhats.com/wp-content/uploads/2016/01/first-birthday-kitten.jpg',
 'http://www.pethealthnetwork.com/sites/default/files/styles/large/public/kittens-in-basket.jpg',
 'http://www.catster.com/wp-content/uploads/2018/02/Cute-gray-tabby-kitten-finger-bite.jpg',
@@ -18,9 +21,6 @@ exports.data = ['http://www.petwebsite.co.uk/media/k2/items/cache/0548677e643278
 'http://pets-wiki.com/wp-content/uploads/2018/02/1500x500-e1517572751187.jpg',
 'http://ochumanesociety.com/clients/3697/images/kittens.jpg',
 'http://fixnation.org/wordpress/wp-content/uploads/2014/03/cats-kittens_00379052.jpg',
-'http://www.tinykittens.com/uploads/cases/canada3.jpg',
-'http://www.pethealthnetwork.com/sites/default/files/what-vaccines-does-my-new-kitten-need-175636241.jpg',
-'http://boydsbengals.com/wp-content/uploads/2015/12/Available-Kitten.jpg',
 'http://www.techwithkids.com/images/Little-Kitten-screenshot5.jpg',
 'http://grza.net/GIS/Animals/Cats%20Kittens/Cat%20Kitten%20Fight.jpg',
 'http://static.cdnbridge.com/resources/18/160536/picture/83/85898883.jpg',
