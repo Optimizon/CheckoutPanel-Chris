@@ -19,7 +19,7 @@ module.exports.generateRandomData = (id) => {
 
   obj.protection_plan.exists = faker.random.boolean();
   obj.protection_plan.name = faker.lorem.text();
-  obj.protection_plan.price = faker.commerce.price();
+  obj.protection_plan.price = (Math.random() * (1000) / 100).toFixed(2);
   obj.protection_plan.years = Math.floor(Math.random()*5) +1;
   obj.protection_plan.provider = faker.company.companyName();
   obj.protection_plan.rating = Math.floor(Math.random()*5);

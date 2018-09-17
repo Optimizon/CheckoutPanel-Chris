@@ -14,6 +14,7 @@ const data = {
   },
   product_id: 1,
   name: 'Google Wifi System, Router Replacement Whole Home Coverage', // (GOOD)
+  image: 'https://images-na.ssl-images-amazon.com/images/I/212yuX23jeL._SL500_SS75_SS75_.jpg',
   link: 'consectetur', // one word (GOOD)
   shares: 89, // (GOOD)
   price: 109, // between 1-1000 (GOOD)
