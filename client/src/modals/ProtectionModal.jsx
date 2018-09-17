@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import styles from '../../styles/protectionModal.css';
 
 const ProtectionModal = ({ show, handleClose, productData }) => {
-  const showHideClassName = show ? "display" : "displayNone"; // check if modal will be shown or not
-  return(
+  const showHideClassName = show ? 'display' : 'displayNone'; // check if modal will be shown or not
+  return (
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
       <section className={ styles.modalMain }>
         <header>
@@ -17,7 +17,7 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
             <h2>{productData.protection_plan.name}</h2>
             <p>from <span>{productData.protection_plan.provider}</span></p>
             <div className="stars">
-              <img></img>
+              <img src={`./images/${productData.protection_plan.rating}-star.png`} />
               <span>(63)</span>
             </div>
             <div>

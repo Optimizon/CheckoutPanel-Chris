@@ -17,7 +17,7 @@ const Info = ({ productData }) => {
       <div className={ styles.price }>${productData.price}.00</div>
       <div className={ styles.miniSpacing }></div>
       <div style={ styleIsPrime }>
-        <div><img src={'./images/isPrime.png'} className={ styles.iconPrime }></img> | <b>FREE</b> One-Day</div>
+        <div><img src={'./images/isPrime.png'} className={ styles.iconPrime } /> | <b>FREE</b> One-Day</div>
         <div className={ styles.miniSpacing }></div>
         <div>Get FREE Delivery <b>TOMORROW</b> if you order within 6 hrs 14 mins and choose this date at checkout.<span className={ styles.details }>Details.</span></div>
       </div>

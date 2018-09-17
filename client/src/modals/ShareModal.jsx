@@ -14,7 +14,7 @@ const ShareModal = ({ show, handleClose, productData }) => {
         <hr></hr>
         <div className={ styles.flex }>
           <div className={ styles.thumbnail }>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/212yuX23jeL._SL500_SS75_SS75_.jpg"></img>
+            <img src="https://images-na.ssl-images-amazon.com/images/I/212yuX23jeL._SL500_SS75_SS75_.jpg" />
           </div>
           <div className={ styles.shareDescription }>
             <b>{productData.name}</b>
