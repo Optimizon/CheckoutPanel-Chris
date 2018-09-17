@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 const helper = require('./helpers/dataGenerator.js');
-mongoose.connect(process.env.DB_URL);
+mongoose.connect('mongodb://localhost/checkout');
 
 const productSchema = new mongoose.Schema({
   product_id: Number,
   name: String,
   shares: Number,
+  image: String,
   link: String,
   price: Number,
   is_prime: Boolean,

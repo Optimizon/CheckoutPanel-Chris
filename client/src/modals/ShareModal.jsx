@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import styles from '../../styles/sharesModal.css';
 
 const ShareModal = ({ show, handleClose, productData }) => {
+  console.log(productData.image);
   const showHideClassName = show ? "display" : "displayNone"; // check if modal will be shown or not
   return(
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
@@ -19,7 +20,7 @@ const ShareModal = ({ show, handleClose, productData }) => {
           <div className={ styles.shareDescription }>
             <b>{productData.name}</b>
             <div>by {productData.seller}</div>
-            <div><b>Link: </b>http://{productData.link}.com</div>
+            <div><b>Link: </b>http://{productData.link}</div>
           </div>
         </div>
         <div className={ styles.miniSpacing }></div>
