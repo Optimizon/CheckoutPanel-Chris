@@ -7,7 +7,7 @@ module.exports.generateRandomData = (id) => {
   };
   obj.product_id = id; // set dependent on loop iteration
   obj.name = faker.commerce.productName();
-  obj.image = faker.image.imageUrl();
+  obj.image = faker.image.imageUrl(); // new
   obj.link = faker.lorem.sentence();
   obj.shares = Math.floor(Math.random() * 100) + 1;
   obj.price = faker.commerce.price();
@@ -23,7 +23,7 @@ module.exports.generateRandomData = (id) => {
   obj.protection_plan.years = Math.floor(Math.random()*5) +1;
   obj.protection_plan.provider = faker.company.companyName();
   obj.protection_plan.rating = Math.floor(Math.random()*5);
-  obj.protection_plan.description = faker.lorem.paragraph();
+  obj.protection_plan.description = faker.lorem.lines();
 
   obj.used_option.exists = faker.random.boolean();
   obj.used_option.price = faker.commerce.price();
