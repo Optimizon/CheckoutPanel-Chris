@@ -5,6 +5,7 @@ mongoose.connect('mongodb://localhost/checkout');
 const productSchema = new mongoose.Schema({
   product_id: Number,
   name: String,
+  image: String,
   shares: Number,
   link: String,
   price: Number,

@@ -15,8 +15,8 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
         <div className={ styles.body }>
           <div className={ styles.protectionInfo }>
             <h2>{productData.protection_plan.name}</h2>
-            <p>from <span>{productData.protection_plan.provider}</span></p>
-            <div className="stars">
+            <p style={{ lineHeight: '0px' }}>from <span>{productData.protection_plan.provider}</span></p>
+            <div className= { styles.stars }>
               <img src={`./images/${productData.protection_plan.rating}-star.png`} />
               <span>(63)</span>
             </div>

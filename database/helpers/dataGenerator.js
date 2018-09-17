@@ -7,6 +7,7 @@ module.exports.generateRandomData = (id) => {
   };
   obj.product_id = id; // set dependent on loop iteration
   obj.name = faker.commerce.productName();
+  obj.image = faker.image.imageUrl();
   obj.link = faker.lorem.sentence();
   obj.shares = Math.floor(Math.random() * 100) + 1;
   obj.price = faker.commerce.price();
