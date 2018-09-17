@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import styles from '../../styles/protectionModal.css';
 
 const ProtectionModal = ({ show, handleClose, productData }) => {
+  // Apply regExp to separate paragraph into array of sentences
+  const descriptionArr = productData.protection_plan.description.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|"); 
   const showHideClassName = show ? 'display' : 'displayNone'; // check if modal will be shown or not
   return (
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
@@ -21,8 +23,9 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
               <span>(63)</span>
             </div>
             <div>
-              <p>Description 1</p>
-              <p>Description 2</p>
+              {
+                descriptionArr.map(line => <li>{line}</li>)
+              }
             </div>
           </div>
           <div className={ styles.buttons }>
