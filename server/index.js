@@ -1,4 +1,4 @@
-// require('dotenv').config();
+require('dotenv').config();
 const express = require('express');
 
 const app = express();
@@ -24,5 +24,5 @@ app.get('/checkout/*', bodyParser.json(), (req, res) => {
   });
 });
 
-const PORT = 3000;
+const PORT = process.env.PORT || 7777;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
