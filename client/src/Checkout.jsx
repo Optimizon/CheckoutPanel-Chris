@@ -19,9 +19,9 @@ class Checkout extends React.Component {
       url: `http://localhost:3000/checkout/${endPath.match(/\d+$/g)}`,
       method: 'GET',
       success: (data) => {
-        this.setState({
-          productData: data,
-        });
+        // this.setState({
+        //   productData: data,
+        // });
       },
     });
   }
