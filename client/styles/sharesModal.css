@@ -52,6 +52,12 @@
   object-fit: cover;
 }
 
+:local .thumbnail > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 :local .shareDescription {
   margin-left: 2vmin;
 }

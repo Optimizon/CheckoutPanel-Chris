@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import styles from '../../styles/sharesModal.css';
 
 const ShareModal = ({ show, handleClose, productData }) => {
-  const showHideClassName = show ? "display" : "displayNone"; // check if modal will be shown or not
-  return(
+  const showHideClassName = show ? 'display' : 'displayNone'; // check if modal will be shown or not
+  return (
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
       <section className={ styles.modalMain }>
         <header>
@@ -14,12 +14,12 @@ const ShareModal = ({ show, handleClose, productData }) => {
         <hr></hr>
         <div className={ styles.flex }>
           <div className={ styles.thumbnail }>
-            <img src="https://images-na.ssl-images-amazon.com/images/I/212yuX23jeL._SL500_SS75_SS75_.jpg" />
+            <img src={ productData.image } />
           </div>
           <div className={ styles.shareDescription }>
             <b>{productData.name}</b>
             <div>by {productData.seller}</div>
-            <div><b>Link: </b>http://{productData.link}.com</div>
+            <div><b>Link: </b>http://{productData.link}</div>
           </div>
         </div>
         <div className={ styles.miniSpacing }></div>

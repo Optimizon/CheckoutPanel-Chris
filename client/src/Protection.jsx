@@ -32,11 +32,11 @@ class Protection extends React.Component {
   }
 
   startTimer() {
-    setInterval( () => {
+    setTimeout(() => {
       this.setState({
         secondsOfLoad: this.state.secondsOfLoad -(-1)
-      })
-    } , 1000)
+      });
+    }, 1000);
   }
 
   render() {

@@ -80,3 +80,8 @@
   background: linear-gradient(white, rgb(228, 228, 228));
   margin: 0px 10px 10px;
 }
+
+:local .stars > img {
+  height: 3vmin;
+  line-height: 0px;
+}

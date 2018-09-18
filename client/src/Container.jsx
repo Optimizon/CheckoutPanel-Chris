@@ -5,6 +5,7 @@ import Quantity from './Quantity.jsx';
 import Purchase from './Purchase.jsx';
 import Info from './Info.jsx';
 import AddToList from './AddToList.jsx';
+import DeliverTo from './DeliverTo.jsx';
 
 class Container extends React.Component {
   constructor(props) {
@@ -27,7 +28,7 @@ class Container extends React.Component {
         <Purchase />
         <div className={ styles.miniSpacing }></div>
         <hr></hr>
-        <div>Deliver to..</div>
+        <DeliverTo />
         <hr></hr>
         <AddToList />
       </div>

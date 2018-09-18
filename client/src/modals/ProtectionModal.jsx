@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import styles from '../../styles/protectionModal.css';
 
 const ProtectionModal = ({ show, handleClose, productData }) => {
+  // Apply regExp to separate paragraph into array of sentences
+  const descriptionArr = productData.protection_plan.description.replace(/([.?!])\s*(?=[A-Z])/g, "$1|").split("|"); 
   const showHideClassName = show ? 'display' : 'displayNone'; // check if modal will be shown or not
   return (
     <div className={ classNames({ [styles.modal]: true, [styles[showHideClassName]]: true }) }>
@@ -15,14 +17,18 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
         <div className={ styles.body }>
           <div className={ styles.protectionInfo }>
             <h2>{productData.protection_plan.name}</h2>
-            <p>from <span>{productData.protection_plan.provider}</span></p>
-            <div className="stars">
+            <p style={{ lineHeight: '0px' }}>from <span>{productData.protection_plan.provider}</span></p>
+            <div className= { styles.stars }>
               <img src={`./images/${productData.protection_plan.rating}-star.png`} />
               <span>(63)</span>
             </div>
             <div>
-              <p>Description 1</p>
-              <p>Description 2</p>
+              {
+                descriptionArr.map(line => <li>{line}</li>)
+              }
+            </div>
+            <div>
+              <p style={{ color: '#0066c0' }}>Learn more</p>
             </div>
           </div>
           <div className={ styles.buttons }>
