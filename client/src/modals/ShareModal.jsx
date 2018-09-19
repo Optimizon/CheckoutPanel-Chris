@@ -32,9 +32,9 @@ const ShareModal = ({ show, handleClose, productData }) => {
         <div className={ styles.miniSpacing }></div>
         <div className={ styles.bottomMain }>
           <div className={ styles.iconMain } >
-            <i className={ classNames({ [styles.iconFacebook]: true, [styles.icon]: true }) }></i>
-            <i className={ classNames({ [styles.iconTwitter]: true, [styles.icon]: true }) }></i>
-            <i className={ classNames({ [styles.iconPinterest]: true, [styles.icon]: true }) }></i>
+            <i className={ styles.iconFacebook }></i>
+            <i className={ styles.iconTwitter }></i>
+            <i className={ styles.iconPinterest }></i>
           </div>
           <div className={ styles.buttons }>
             <input className={ styles.submitButton } type="button" value="Send e-mail"></input>

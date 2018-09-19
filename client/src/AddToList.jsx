@@ -26,7 +26,7 @@ class AddToList extends React.Component {
 
   render() {
     const styleArrowButton = {
-      background: 'url(./images/croppedListArrow.png)',
+      background: 'url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/croppedListArrow.png)',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: '50% 50%',
@@ -43,7 +43,7 @@ class AddToList extends React.Component {
             ? (
               <div className={ styles.dropDownContent }>
                 <li>
-                  <span><img className={ styles.listIcon } src="./images/favorites-star.png" /><span><div>My Wish List</div><div style={{ fontSize: '2vmin' }}>public</div></span></span>
+                  <span><img className={ styles.listIcon } src="https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/favorites-star.png" /><span><div>My Wish List</div><div style={{ fontSize: '2vmin' }}>public</div></span></span>
                 </li>
                 <li>Save for later</li>
                 <li>Clothing & Jewelry</li>

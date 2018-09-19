@@ -42,7 +42,7 @@
 }
 
 :local .miniSpacing {
-  margin-bottom: 10px;
+  margin-bottom: 1.7vmin;
 }
 
 :local .protectionInfo {
@@ -65,7 +65,7 @@
 :local .buttons > div > input {
   color: black;
   display: block;
-  height: 30px;
+  height: 5vmin;
   width: 100%;
   border-radius: 4px;
   border-color: grey;
@@ -78,7 +78,7 @@
 
 :local .noThanksButton {
   background: linear-gradient(white, rgb(228, 228, 228));
-  margin: 0px 10px 10px;
+  margin: 0px 1.7vmin 1.7vmin;
 }
 
 :local .stars > img {

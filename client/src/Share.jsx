@@ -48,10 +48,10 @@ class Share extends React.Component {
             : (<ShareModal productData={this.props.productData} show={this.state.showModal} handleClose={this.hideModal}></ShareModal>)
         }
         <span className={ styles.click} onClick={this.showModal}>Share</span>
-        <i className={ classNames({ [styles.iconMail]: true, [styles.icon]: true }) }></i>
-        <i className={ classNames({ [styles.iconFacebook]: true, [styles.icon]: true }) }></i>
-        <i className={ classNames({ [styles.iconTwitter]: true, [styles.icon]: true }) }></i>
-        <i className={ classNames({ [styles.iconPinterest]: true, [styles.icon]: true }) }></i>
+        <i className={ styles.iconMail }></i>
+        <i className={ styles.iconFacebook }></i>
+        <i className={ styles.iconTwitter }></i>
+        <i className={ styles.iconPinterest }></i>
         <span>{this.props.productData.shares}K+ Shares</span>
       </div>
     )

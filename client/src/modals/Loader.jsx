@@ -19,7 +19,7 @@ const Loader = ({ show, handleClose }) => {
         </header>
         <hr/>
         <div>
-          <img style={ styleLoading } src="./images/loadingGif.gif" />
+          <img style={ styleLoading } src="https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/loadingGif.gif" />
         </div>
       </section>
     </div>
