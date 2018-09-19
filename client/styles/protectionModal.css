@@ -11,7 +11,7 @@
 
 :local .modalMain {
   border-radius: 4px;
-  padding: 13px;
+  padding: 3vmin;
   z-index: 2;
   position:fixed;
   background: white;

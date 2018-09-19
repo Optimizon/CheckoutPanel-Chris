@@ -5,7 +5,7 @@
 }
 
 :local .purchase > button {
-  padding: 1px;
+  padding: 0.2vmin;
   color: black;
   display: block;
   height: 5vmin;
