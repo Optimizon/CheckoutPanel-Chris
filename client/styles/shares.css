@@ -8,42 +8,34 @@
   color: #0066c0;
 }
 
-:local .icon {
-  background: url(https://m.media-amazon.com/images/G/01/AUIClients/AmazonUIBaseCSS-sprite_2x-01a49470266a51f632dab1aef2fc09112d280c1e._V2_.png);
-  background-size: 400px 900px;
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: top;
-}
-
 :local .iconMail {
-  width: 19px;
-  height: 17px;
-  position: relative;
-  top: 1px;
-  background-position: -99px -168px;
+  background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/mail-icon.png);
+  width: 3.5vmin;
+  height: 3.2vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 :local .iconFacebook {
-  width: 17px;
-  height: 17px;
-  background-position: -36px -168px;
-  position: relative;
-  top: 1px;
+  background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/facebook-icon.png);
+  width: 3.3vmin;
+  height: 3.2vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 :local .iconTwitter {
-  width: 18px;
-  height: 17px;
-  background-position: -57px -168px;
-  position: relative;
-  top: 1px;
+  background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/twitter-icon.png);
+  width: 3.3vmin;
+  height: 3.2vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 :local .iconPinterest {
-  width: 17px;
-  height: 17px;
-  background-position: -78px -168px;
-  position: relative;
-  top: 1px;
+  background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/pinterest-icon.png);
+  width: 3.3vmin;
+  height: 3.2vmin;
+  background-size: cover;
+  background-repeat: no-repeat;
 }

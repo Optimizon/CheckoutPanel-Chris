@@ -8,10 +8,10 @@
 }
 
 :local .miniSpacing {
-  margin-bottom: 10px;
+  margin-bottom: 3vmin;
 }
 
 :local .mediumSpacing {
-  margin-bottom: 20px;
+  margin-bottom: 4vmin;
 }
 

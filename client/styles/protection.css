@@ -3,7 +3,7 @@
 }
 
 :local .protection > input {
-  margin: 5px;
+  margin: 1.5vmin;
 }
 
 :local .protectionPlan {

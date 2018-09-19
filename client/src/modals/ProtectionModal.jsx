@@ -19,12 +19,12 @@ const ProtectionModal = ({ show, handleClose, productData }) => {
             <h2>{productData.protection_plan.name}</h2>
             <p style={{ lineHeight: '0px' }}>from <span>{productData.protection_plan.provider}</span></p>
             <div className= { styles.stars }>
-              <img src={`./images/${productData.protection_plan.rating}-star.png`} />
+              <img src={`https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/${productData.protection_plan.rating}-star.png`} />
               <span>(63)</span>
             </div>
             <div>
               {
-                descriptionArr.map(line => <li>{line}</li>)
+                descriptionArr.map(line => <li key={line} >{line}</li>)
               }
             </div>
             <div>

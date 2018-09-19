@@ -16,7 +16,7 @@ class Checkout extends React.Component {
     const endPath = window.location.search; // takes the current window URL
 
     $.ajax({
-      url: `http://localhost:3000/checkout/${endPath.match(/\d+$/g)}`,
+      url: `http://localhost:7777/checkout/${endPath.match(/\d+$/g)}`,
       method: 'GET',
       success: (data) => {
         this.setState({
