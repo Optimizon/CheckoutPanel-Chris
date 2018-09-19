@@ -1,7 +1,7 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 const helper = require('./helpers/dataGenerator.js');
 mongoose.connect(process.env.DB_URI);
-// mongoose.connect('mongodb://localhost/checkout');
 
 const productSchema = new mongoose.Schema({
   product_id: Number,
