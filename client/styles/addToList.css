@@ -20,6 +20,7 @@
   width: 90%;
   height: 5vmin;
   text-align: left;
+  font-size: 2vmin;
 }
 
 :local .arrowButton {
