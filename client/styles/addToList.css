@@ -4,7 +4,7 @@
 }
 
 :local .addToList {
-  font-size: 2.2vmin;
+  font-size: 1.75vmin;
   border-style: solid;
   border-width: 1px;
   border-radius: 4px;
@@ -20,7 +20,7 @@
   width: 90%;
   height: 5vmin;
   text-align: left;
-  font-size: 2vmin;
+  font-size: 1.75vmin;
 }
 
 :local .arrowButton {

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/quantity.css';
 
 const Quantity = ({ productData }) => {
   // dynamically render number of quantity based on quantity max property
@@ -10,7 +11,7 @@ const Quantity = ({ productData }) => {
   return (
     <div>
       <span>Qty: </span>
-      <select>
+      <select className={ styles.optionButton }>
         {optionArr}
       </select>
     </div>

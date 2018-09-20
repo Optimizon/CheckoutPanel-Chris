@@ -49,7 +49,7 @@ class Protection extends React.Component {
         }
         <b>Add a Protection Plan:</b>
         <div className={ styles.protection }>
-          <input type="checkbox"></input><span onClick={this.showModal} className={ styles.protectionPlan }>{this.props.productData.protection_plan.years}-Year Protection</span> for <span className={ styles.price }>${this.props.productData.protection_plan.price}</span>
+          <input className={ styles.checkBox } type="checkbox"></input><span onClick={this.showModal} className={ styles.protectionPlan }>{this.props.productData.protection_plan.years}-Year Protection</span> for <span className={ styles.price }>${this.props.productData.protection_plan.price}</span>
         </div>
       </div>
     )
