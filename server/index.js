@@ -9,7 +9,7 @@ const path = require('path');
 const db = require('../database');
 
 app.use((req, res, next) => {
-  console.log(`${req.method} request receieved at ${req.url}.`);
+  console.log(`${req.method} request recieved at ${req.url}.`);
   next();
 });
 
