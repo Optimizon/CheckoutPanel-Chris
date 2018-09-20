@@ -6,12 +6,12 @@ const Quantity = ({ productData }) => {
   const quantity = productData.quantity_max;
   const optionArr = [];
   for (let i = 1; i <= quantity; i++) {
-    optionArr.push(<option className={ styles.optionButton } key={i} value={`${i}`}>{i}</option>);
+    optionArr.push(<option key={i} value={`${i}`}>{i}</option>);
   }
   return (
     <div>
       <span>Qty: </span>
-      <select>
+      <select className={ styles.optionButton }>
         {optionArr}
       </select>
     </div>

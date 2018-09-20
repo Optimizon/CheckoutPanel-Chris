@@ -1,5 +1,10 @@
 .optionButton {
-  background-color: grey;
-  height: 1vmin;
-  width: auto;
+  background-color: rgb(245, 245, 245);
+  height: 3vmin;
+  width: 5vmin;
+}
+
+.optionButton:after {
+  height: 3vmin;
+  width: 5vmin;
 }

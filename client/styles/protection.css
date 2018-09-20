@@ -15,5 +15,6 @@
 }
 
 :local .checkBox {
-  size: 2vmin;
+  height: 2vmin;
+  width: 2vmin;
 }
