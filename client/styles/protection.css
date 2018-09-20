@@ -13,3 +13,7 @@
 :local .price {
   color:#B12704;
 }
+
+:local .checkBox {
+  size: 2vmin;
+}

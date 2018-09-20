@@ -10,32 +10,32 @@
 
 :local .iconMail {
   background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/mail-icon.png);
-  width: 3.5vmin;
-  height: 3.2vmin;
+  width: 3.1vmin;
+  height: 2.7vmin;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 :local .iconFacebook {
   background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/facebook-icon.png);
-  width: 3.3vmin;
-  height: 3.2vmin;
+  width: 3vmin;
+  height: 2.7vmin;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 :local .iconTwitter {
   background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/twitter-icon.png);
-  width: 3.3vmin;
-  height: 3.2vmin;
+  width: 3vmin;
+  height: 2.7vmin;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 :local .iconPinterest {
   background: url(https://s3-us-west-1.amazonaws.com/mattminwoolee-checkout/images/pinterest-icon.png);
-  width: 3.3vmin;
-  height: 3.2vmin;
+  width: 3vmin;
+  height: 2.7vmin;
   background-size: cover;
   background-repeat: no-repeat;
 }
