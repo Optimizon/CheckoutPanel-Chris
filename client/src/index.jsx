@@ -4,4 +4,4 @@ import Checkout from './Checkout.jsx';
 
 window.Checkout = Checkout;
 
-// ReactDOM.render(<Checkout />, document.getElementById('checkout'));
+ReactDOM.render(<Checkout />, document.getElementById('Checkout'));
