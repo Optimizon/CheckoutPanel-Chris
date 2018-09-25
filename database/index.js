@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect(process.env.DB_URI);
+mongoose.connect(process.env.MLAB_DB_URI);
 
 const productSchema = new mongoose.Schema({
   product_id: Number,
