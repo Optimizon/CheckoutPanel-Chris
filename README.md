@@ -1,13 +1,10 @@
 # Project Name
 
-> Project description
+> Optimizon - Optimization of the back end of an Amazon clone.
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+- https://github.com/8-bit-beauty/component-mattminwoolee
 
 ## Table of Contents
 
@@ -17,7 +14,21 @@
 
 ## Usage
 
-> Some usage instructions
+API Endpoints:
+
+POST: /checkout/
+  Creates new record. Expects JSON object containing key-value pairs.
+
+GET: /checkout/:id
+  Retrieves record for <id>
+
+PUT: /checkout/:id
+  Updates existing record with id <id>. Expects JSON object containing key-value pair(s) of desired update(s).
+
+DELETE: /checkout/:id
+  Deletes record with id <id> from database.
+
+
 
 ## Requirements
 

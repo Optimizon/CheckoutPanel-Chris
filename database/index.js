@@ -57,7 +57,7 @@ const insertRecord = (record, callback) => {
 };
 
 const updateRecord = (id, objectValue, callback) => {
-  Product.update({product_id: id}, {$set: objectValue}, (err, data) => {
+  Product.updateOne({product_id: id}, {$set: objectValue}, (err, data) => {
     if (err) {
       callback(err, null);
     } else {

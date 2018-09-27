@@ -56,7 +56,6 @@ app.put('/checkout/:id', (req, res) => {
 
 app.delete('/checkout/:id', (req, res) => {
   db.deleteRecord(req.params.id, (err, data) => {
-    console.log('****ID****', req.params.id)
     if (err) {
       console.log('DELETE ERROR ', err);
       res.status(500).send('DELETE ERROR');
