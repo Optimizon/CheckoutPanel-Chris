@@ -1,7 +1,9 @@
 require('dotenv').config();
 const mongoose = require('mongoose');
 const helper = require('./helpers/dataGenerator.js');
-mongoose.connect(process.env.DB_URI);
+// mongoose.connect(process.env.MLAB_DB_URI);
+mongoose.connect('mongodb://localhost/optimizon', { useNewUrlParser: true });
+
 
 const productSchema = new mongoose.Schema({
   product_id: Number,
@@ -38,6 +40,7 @@ const generateRandomData = () => {
     const newEntry = new Product(helper.generateRandomData(id));
     newEntry.save();
   }
+  console.log('Seed succesfully completed.')
 };
 
 generateRandomData();
