@@ -27,3 +27,5 @@ coverage
 build/
 dist/bundle.js
 
+# JSON data files
+/database/JSONData/*.csv

@@ -1,6 +1,12 @@
 const faker = require('faker');
 const cats = require('./cats.js');
 
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 module.exports.generateRandomData = (id) => {
   const obj = {
     protection_plan: {},
@@ -9,11 +15,13 @@ module.exports.generateRandomData = (id) => {
   obj.product_id = id;
   obj.name = faker.commerce.productName();
 
-  if (cats.data[id]) {
-    obj.image = cats.data[id];
-  } else {
-    obj.image = Math.floor(cats.data[id / 3]);
-  }
+  // if (cats.data[id]) {
+  //   obj.image = cats.data[id];
+  // } else {
+  //   obj.image = cats.data[Math.floor(id / 3)];
+  // }
+
+  obj.image = cats.data[getRandomIntInclusive(0, 32)]
   
   obj.link = faker.lorem.sentence();
   obj.shares = Math.floor(Math.random() * 100) + 1;
@@ -32,8 +40,8 @@ module.exports.generateRandomData = (id) => {
   obj.protection_plan.rating = Math.floor(Math.random()*5);
   obj.protection_plan.description = faker.lorem.lines();
 
-  obj.used_option.exists = faker.random.boolean();
-  obj.used_option.price = faker.commerce.price();
+  // obj.used_option.exists = faker.random.boolean();
+  // obj.used_option.price = faker.commerce.price();
   return obj;
 };
 
