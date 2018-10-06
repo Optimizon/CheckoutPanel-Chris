@@ -27,5 +27,6 @@ coverage
 build/
 dist/bundle.js
 
-# JSON data files
-/database/CSVData/*.csv
+# data files
+/database/dataGenerator/Cassandra/*.csv
+/database/dataGenerator/PostgreSQL/*.csv
