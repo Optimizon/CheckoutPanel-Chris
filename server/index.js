@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('newrelic');
 const express = require('express');
 const cors = require('cors')
 
@@ -14,7 +15,8 @@ app.use((req, res, next) => {
 });
 
 app.use(bodyParser.json());
-app.use(cors( { origin: 'http://localhost:3000'} ));
+// app.use(cors( { origin: 'http://localhost:3000'} ));
+app.use(cors());
 app.use(express.static('./client/dist'));
 
 app.get('/checkout/:id', (req, res) => {
@@ -22,16 +24,16 @@ app.get('/checkout/:id', (req, res) => {
   db.retrieveInformationById(req.params.id, (err, data) => {
     if (err) {
       console.log('GET ERROR ', err);
-      res.send(err);
+      res.status(500).send(err);
     } else {
       console.log('GET SUCCESSFUL ', data);
-      res.json(data[0]);
+      res.status(200).json(data);
     }
   });
 });
 
 app.post('/checkout', (req, res) => {
-  db.insertRecord(req.body, (err, data) => {
+  db.insertProductRecord(req.body, (err, data) => {
     if (err) {
       console.log('POST ERROR ', err);
       res.status(500).send('POST ERROR');
@@ -42,8 +44,8 @@ app.post('/checkout', (req, res) => {
   });
 });
 
-app.put('/checkout/:id', (req, res) => {
-  db.updateRecord(req.params.id, req.body, (err, data) => {
+app.put('/checkout', (req, res) => {
+  db.updateRecord(req.body, (err, data) => {
     if (err) {
       console.log('PUT ERROR ', err);
       res.status(500).send('PUT ERROR');
@@ -54,8 +56,8 @@ app.put('/checkout/:id', (req, res) => {
   });
 });
 
-app.delete('/checkout/:id', (req, res) => {
-  db.deleteRecord(req.params.id, (err, data) => {
+app.delete('/checkout', (req, res) => {
+  db.deleteRecord(req.body, (err, data) => {
     if (err) {
       console.log('DELETE ERROR ', err);
       res.status(500).send('DELETE ERROR');
