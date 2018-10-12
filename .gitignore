@@ -30,3 +30,12 @@ dist/bundle.js
 # data files
 /database/dataGenerator/Cassandra/*.csv
 /database/dataGenerator/PostgreSQL/*.csv
+
+# Artillery
+artillery*.yml
+
+# K6
+k6*.js
+
+# New Relic
+newrelic.js

@@ -1,6 +1,24 @@
 require('dotenv').config();
-const { Client } = require('pg');
-const client = new Client({
+// const { Client } = require('pg');
+const { Pool } = require('pg');
+
+// const client = new Client({
+//   user: process.env.PGUSER,
+//   host: process.env.PGHOST,
+//   database: process.env.PGDATABASE,
+//   password: process.env.PGPASSWORD,
+//   port: process.env.PGPORT,
+// });
+
+// client.connect((err, res) => {
+//   if (err) {
+//     console.log('ERROR connecting to database: ', err.stack);
+//   } else {
+//     console.log(`Database Connected! Running on port ${process.env.PGPORT}`);
+//   }
+// });
+
+const pool = new Pool({
   user: process.env.PGUSER,
   host: process.env.PGHOST,
   database: process.env.PGDATABASE,
@@ -8,21 +26,22 @@ const client = new Client({
   port: process.env.PGPORT,
 });
 
-client.connect((err, res) => {
+pool.connect((err, client, release) => {
   if (err) {
-    console.log('ERROR connecting to database: ', err.stack);
+    return console.error('Error acquiring client', err.stack);
   } else {
-    console.log(`Database Connected! Running on port ${process.env.PGPORT}`);
+     console.log(`Database Connected! Running on port ${process.env.PGPORT}`);
   }
 });
+
 
 const retrieveInformationById = (id, callback) => {
   const getQuery = {
     text: 'SELECT product.*, protect.name AS protection_plan_name, protect.price AS protection_plan_price, protect.years, protect.provider, protect.rating, protect.description FROM product LEFT JOIN protection_plan protect ON product.protection_plan_id = protect.id WHERE product.id = $1',
     values: [id],
   };
-
-  client.query(getQuery, (err, res) => {
+  // client.query(getQuery, (err, res) => {
+  pool.query(getQuery, (err, res) => {
     if (err) {
       callback(err.stack, null);
     } else {
@@ -61,8 +80,8 @@ const insertProductRecord = (record, callback) => {
     text: 'INSERT INTO product (name, image, link, shares, price, is_prime, in_stock, giftwrap_available, quantity_max, seller, protection_plan_exists, protection_plan_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)',
     values: [name, image, link, shares, price, is_prime, in_stock, giftwrap_available, quantity_max, seller, protection_plan_exists, protection_plan_id],
   };
-
-  client.query(postQuery, (err, res) => {
+  // client.query(postQuery, (err, res) => {
+  pool.query(postQuery, (err, res) => {
     if (err) {
       callback(err.stack, null);
     } else {
@@ -77,8 +96,8 @@ const updateRecord = (record, callback) => {
     text: `UPDATE product SET ${column} = $1 WHERE id = ${id}`,
     values: [newValue],
   };
-
-  client.query(putQuery, (err, res) => {
+  // client.query(putQuery, (err, res) => {
+  pool.query(putQuery, (err, res) => {
     if (err) {
       callback(err.stack, null);
     } else {
@@ -93,8 +112,8 @@ const deleteRecord = (record, callback) => {
     text: 'DELETE FROM product WHERE id = $1',
     values: [id],
   };
-
-  client.query(deleteQuery, (err, res) => {
+  // client.query(deleteQuery, (err, res) => {
+  pool.query(deleteQuery, (err, res) => {
     if (err) {
       callback(err.stack, null);
     } else {
